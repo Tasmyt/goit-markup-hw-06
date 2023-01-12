@@ -615,7 +615,7 @@ color: var(--color-background);
   top: 50%;
   left: 50%;
   min-width: 528px;
-  min-height: 580px;
+  min-height: 581px;
   transform: translate(-50%, -50%) scale(1);
   padding: 40px;
   background-color: var(--color-background);
@@ -667,15 +667,10 @@ color: var(--color-background);
   margin-top: 10px;
 }
 
-.form-div {
-position: relative;
-
-}
-
 .modal-input {
 width: 100%;
 height: 40px;
-
+padding-left: 42px;
 border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
 
@@ -686,10 +681,10 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: absolute;
   top: 50%;
   left: 12px;
-  transform: translateY(-50%);
+  
   fill: var(--color-primary);
   
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-label {
@@ -710,13 +705,13 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 .form-contract {
   position: relative;
-  display: block;
-  margin: 20px auto 30px;
+  display: flex;
+  margin: 20px auto 30px auto;
 
 }
 .label-contract {
   
-  line-height: 1.71;  
+  line-height: 1.17;  
   color: var(--color-minor);
 }
 
@@ -727,10 +722,13 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 .icon-contract {
   display: inline-block;
+  margin-right: 8px;
+  
   width: 16px;
   height: 15px;
   border: 2px solid var(--color-primary);
   border-radius: 2px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-button {
@@ -747,8 +745,13 @@ background-origin: border-box;
 border-color: var(--color-activ);
 }
 
+.visually-hidden:focus+.icon-contract,
+.visually-hidden:hover+.icon-contract{
+  border: 2px solid var(--color-activ);
+}
+
 .modal-input:focus + .form-icon,
-.modal-input:hover +.form-icon {
+.modal-input:hover +.form-icon { 
   fill: var(--color-activ);
 } 
 
@@ -762,11 +765,6 @@ border-color: var(--color-activ);
   display: flex;
 }
 
-.footer-box {
-  display: flex;
-  position: relative;
-  justify-content: center;
-}
 .footer-email {
   width: 358px;
   height: 50px;
@@ -786,6 +784,9 @@ border-color: var(--color-activ);
 
 .footer-button {
   padding: 10px 62px 10px 28px;
+  display: flex;
+  position: relative;
+  justify-content: center;
 }
 
 .send {
